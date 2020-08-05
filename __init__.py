@@ -10,7 +10,7 @@ try:
     GPIO.setmode(GPIO.BCM)
     
 except Exception as e:
-    print e
+    print(e)
     pass
 
 @cbpi.controller
@@ -61,7 +61,7 @@ class Mod_PWM_Logic(KettleController):
                 Mod_PWM.power = top                
             self.sleep(1)
             Ntop = x.power
-            if int(Ntop) <> int(top):
+            if int(Ntop) != int(top):
                 top = Ntop
             self.heater_off()
 
